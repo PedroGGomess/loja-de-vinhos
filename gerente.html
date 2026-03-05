@@ -1,0 +1,133 @@
+<! DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinha D'Ouro - Gerente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L8 6v10c0 2 1 4 4 6 3-2 4-4 4-6V6l-4-4z"/>
+                    </svg>
+                </div>
+                <h2>Vinha D'Ouro</h2>
+            </div>
+            
+             <div class="sidebar-user">
+                <div class="user-avatar" style="background:  #722f37;">G</div>
+                <div>
+                    <p style="font-weight: bold;">Gerente</p>
+                    <p style="font-size: 12px; opacity: 0.8;">Admin</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="gerente.html" class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M3 9h18M9 21V9"/>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="gerente-equipa.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                    </svg>
+                    <span>Equipa</span>
+                </a>
+                <a href="gerente-vendas.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span>Vendas</span>
+                </a>
+                <a href="gerente-relatorios.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                    </svg>
+                    <span>Relatórios</span>
+                </a>
+            </nav>
+            
+            <a href="index.html" class="logout-btn">Sair</a>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1 class="page-title">Dashboard Executivo</h1>
+                    <p class="page-subtitle">Visão geral do negócio</p>
+                </div>
+            </header>
+            
+            <div class="dashboard-grid">
+                <div class="kpi-card">
+                    <p class="kpi-label">Receita Total</p>
+                    <div class="kpi-value">€12,450</div>
+                    <small class="kpi-trend positive">↗ +18% este mês</small>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">Vendas (Garrafas)</p>
+                    <div class="kpi-value">185</div>
+                    <small class="kpi-meta">Unidades vendidas</small>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">Lucro Líquido</p>
+                    <div class="kpi-value">€4,230</div>
+                    <small class="kpi-trend positive">Margem de 34%</small>
+                </div>
+            </div>
+            
+            <div class="data-table-container">
+                <div class="table-header">
+                    <h3>Vendas Recentes</h3>
+                    <p class="table-subtitle">Últimas transações realizadas</p>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Produtos</th>
+                            <th>Total</th>
+                            <th>Pagamento</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>#VD-1043</code></td>
+                            <td><strong>João Silva</strong></td>
+                            <td>Château Margaux 2015</td>
+                            <td class="price-col">€450.99</td>
+                            <td>💳 Cartão</td>
+                            <td><span class="status-success">✓ Concluído</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>#VD-1042</code></td>
+                            <td><strong>Maria Santos</strong></td>
+                            <td>2x Cloudy Bay</td>
+                            <td class="price-col">€90.00</td>
+                            <td>📱 MB Way</td>
+                            <td><span class="status-success">✓ Concluído</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>#VD-1041</code></td>
+                            <td><strong>Hotel Ritz</strong></td>
+                            <td>6x Dom Pérignon</td>
+                            <td class="price-col">€2,313.00</td>
+                            <td>🏦 Transferência</td>
+                            <td><span class="status-pending">⏳ Pendente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

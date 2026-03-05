@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinha D'Ouro - Stock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L8 6v10c0 2 1 4 4 6 3-2 4-4 4-6V6l-4-4z"/>
+                    </svg>
+                </div>
+                <h2>Vinha D'Ouro</h2>
+            </div>
+            <div class="sidebar-user">
+                <div class="user-avatar" style="background:  #b9182b;">G</div>
+                <div>
+                    <p style="font-weight: bold;">Armazenista</p>
+                    <p style="font-size: 12px; opacity: 0.8;">Logística</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="stock.html" class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    </svg>
+                    <span>Inventário</span>
+                </a>
+            </nav>
+            
+            <a href="index.html" class="logout-btn">Sair</a>
+        </aside>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <h1 class="page-title">Gestão de Stock</h1>
+                    <p class="page-subtitle">Controlo de inventário</p>
+                </div>
+            </header>
+            
+            <div class="dashboard-grid">
+                <div class="kpi-card">
+                    <p class="kpi-label">Total de Vinhos</p>
+                    <div class="kpi-value">2,450</div>
+                    <small class="kpi-meta">Garrafas em armazém</small>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">Stock Crítico</p>
+                    <div class="kpi-value" style="color: #c62828;">4</div>
+                    <small class="kpi-trend negative">⚠ Reposição urgente</small>
+                </div>
+                <div class="kpi-card">
+                    <p class="kpi-label">Valor em Stock</p>
+                    <div class="kpi-value">€145k</div>
+                    <small class="kpi-meta">Inventário total</small>
+                </div>
+            </div>
+            
+            <div class="data-table-container">
+                <div class="table-header">
+                    <h3>Inventário Completo</h3>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Produto</th>
+                            <th>Categoria</th>
+                            <th>Preço</th>
+                            <th>Stock</th>
+                            <th>Localização</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>#1001</code></td>
+                            <td><strong>Château Margaux 2015</strong></td>
+                            <td>Tinto</td>
+                            <td class="price-col">€450.99</td>
+                            <td><strong style="color: #f57c00;">8 un.</strong></td>
+                            <td>Cave Premium A1</td>
+                            <td><span class="status-warning">⚠ Baixo</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>#1002</code></td>
+                            <td><strong>Sassicaia 2018</strong></td>
+                            <td>Tinto</td>
+                            <td class="price-col">€320.00</td>
+                            <td><strong style="color: #f57c00;">6 un.</strong></td>
+                            <td>Cave Premium B1</td>
+                            <td><span class="status-warning">⚠ Baixo</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>#1003</code></td>
+                            <td><strong>Pêra-Manca 2015</strong></td>
+                            <td>Tinto</td>
+                            <td class="price-col">€140.00</td>
+                            <td><strong style="color:  #2e7d32;">15 un.</strong></td>
+                            <td>Cave Nacional C2</td>
+                            <td><span class="status-success">✓ Normal</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>#1004</code></td>
+                            <td><strong>Cloudy Bay</strong></td>
+                            <td>Branco</td>
+                            <td class="price-col">€45.00</td>
+                            <td><strong style="color: #2e7d32;">25 un.</strong></td>
+                            <td>Cave Standard E2</td>
+                            <td><span class="status-success">✓ Normal</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
