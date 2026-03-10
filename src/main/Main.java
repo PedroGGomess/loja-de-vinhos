@@ -2,16 +2,18 @@
  * Main — ponto de entrada da aplicação Loja de Vinhos.
  *
  * Inicializa repositórios, popula dados de exemplo na primeira execução,
- * e inicia o menu principal em loop até o utilizador escolher sair.
+ * inicia o servidor HTTP (interface web) e o menu principal de consola.
  */
 package main;
 
 import main.model.*;
 import main.repository.*;
 import main.service.*;
+import main.server.ApiServer;
 import main.ui.MenuPrincipal;
 
 import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
@@ -41,18 +43,31 @@ public class Main {
         LojaService    lojaService    = new LojaService(vinhoRepo, vendaRepo, clienteRepo);
         AuthService    authService    = new AuthService(clienteRepo, funcionarioRepo);
 
-        // --- 4. Iniciar menu principal ---
+        // --- 4. Iniciar servidor HTTP (interface web) ---
+        ApiServer apiServer = null;
+        try {
+            apiServer = new ApiServer(8080, vinhoRepo, vendaRepo, funcionarioRepo,
+                    lojaService, vendaService, equipaService);
+            apiServer.start();
+        } catch (IOException e) {
+            System.err.println("⚠  Não foi possível iniciar o servidor web: " + e.getMessage());
+        }
+
+        // --- 5. Iniciar menu principal ---
         Scanner sc = new Scanner(System.in);
         MenuPrincipal menu = new MenuPrincipal(sc, authService, lojaService,
                 stockService, vendaService, equipaService, clienteRepo);
         menu.iniciar();
 
-        // --- 5. Guardar dados antes de terminar ---
+        // --- 6. Guardar dados antes de terminar ---
         vinhoRepo.save(vinhoRepo.findAll());
         clienteRepo.save(clienteRepo.findAll());
         vendaRepo.save(vendaRepo.findAll());
         funcionarioRepo.save(funcionarioRepo.findAll());
 
+        if (apiServer != null) {
+            apiServer.stop();
+        }
         sc.close();
     }
 
