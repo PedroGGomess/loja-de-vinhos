@@ -62,5 +62,3 @@ class WineShopAgent {
         // Implement report generation logic
     }
 }
-
-module.exports = WineShopAgent;

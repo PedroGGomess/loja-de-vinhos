@@ -24,12 +24,3 @@ function manageTeam() {
 function manageStock() {
     // Logic to manage stock levels
 }
-
-// Exporting functions to use in other modules
-module.exports = {
-    loadProducts,
-    manageCart,
-    loadDashboard,
-    manageTeam,
-    manageStock
-};
