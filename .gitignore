@@ -1,0 +1,13 @@
+# Compiled Java output
+out/
+
+# Java serialized data files (generated at runtime)
+*.dat
+log.txt
+relatorio_*.txt
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.class
