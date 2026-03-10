@@ -50,78 +50,16 @@
                 <!-- PAINEL DOS PRODUTOS -->
                 <div class="products-panel">
                     <div class="category-selector">
-                        <button class="category-btn active">Todos</button>
-                        <button class="category-btn">🍷 Tinto</button>
-                        <button class="category-btn">🥂 Branco</button>
-                        <button class="category-btn">🌸 Rosé</button>
-                        <button class="category-btn">🍾 Champagne</button>
-                        <button class="category-btn">🍷 Porto</button>
+                        <button class="category-btn active" data-tipo="">Todos</button>
+                        <button class="category-btn" data-tipo="Tinto">🍷 Tinto</button>
+                        <button class="category-btn" data-tipo="Branco">🥂 Branco</button>
+                        <button class="category-btn" data-tipo="Rosé">🌸 Rosé</button>
+                        <button class="category-btn" data-tipo="Espumante">🍾 Espumante</button>
+                        <button class="category-btn" data-tipo="Porto">🍷 Porto</button>
                     </div>
                     
-                    <div class="products-grid">
-                        <div class="product-card">
-                            <div class="product-image">🍷</div>
-                            <h3>Château Margaux 2015</h3>
-                            <p style="font-size: 12px; color: #888; margin:  5px 0;">Tinto • Grand Cru</p>
-                            <div class="product-price">€450.99</div>
-                            <button class="btn-add">Adicionar</button>
-                        </div>
-                        
-                        <div class="product-card">
-                            <div class="product-image">🍷</div>
-                            <h3>Sassicaia 2018</h3>
-                            <p style="font-size: 12px; color: #888; margin: 5px 0;">Tinto • Super Tuscan</p>
-                            <div class="product-price">€320.00</div>
-                            <button class="btn-add">Adicionar</button>
-                        </div>
-                        
-                        <div class="product-card">
-                            <div class="product-image">🍷</div>
-                            <h3>Pêra-Manca 2015</h3>
-                            <p style="font-size: 12px; color: #888; margin: 5px 0;">Tinto • Alentejo</p>
-                            <div class="product-price">€140.00</div>
-                            <button class="btn-add">Adicionar</button>
-                        </div>
-                        
-                        <div class="product-card">
-                            <div class="product-image">🍾</div>
-                            <h3>Dom Pérignon 2012</h3>
-                            <p style="font-size: 12px; color: #888; margin: 5px 0;">Champagne • Vintage</p>
-                            <div class="product-price">€385.50</div>
-                            <button class="btn-add">Adicionar</button>
-                        </div>
-
-                        <div class="product-card">
-                            <div class="product-image">🥂</div>
-                            <h3>Cloudy Bay</h3>
-                            <p style="font-size: 12px; color: #888; margin: 5px 0;">Branco • Nova Zelândia</p>
-                            <div class="product-price">€45.00</div>
-                            <button class="btn-add">Adicionar</button>
-                        </div>
-                        
-                        <div class="product-card">
-                            <div class="product-image">🍷</div>
-                            <h3>Barca Velha 2011</h3>
-                            <p style="font-size: 12px; color: #888; margin: 5px 0;">Tinto • Douro</p>
-                            <div class="product-price">€280.00</div>
-                            <button class="btn-add">Adicionar</button>
-                        </div>
-                        
-                        <div class="product-card">
-                            <div class="product-image">🍷</div>
-                            <h3>Taylor's Vintage 2000</h3>
-                            <p style="font-size: 12px; color: #888; margin: 5px 0;">Porto • Vintage</p>
-                            <div class="product-price">€195.00</div>
-                            <button class="btn-add">Adicionar</button>
-                        </div>
-                        
-                        <div class="product-card">
-                            <div class="product-image">🌸</div>
-                            <h3>Whispering Angel</h3>
-                            <p style="font-size: 12px; color: #888; margin: 5px 0;">Rosé • Provence</p>
-                            <div class="product-price">€32.00</div>
-                            <button class="btn-add">Adicionar</button>
-                        </div>
+                    <div class="products-grid" id="products-grid">
+                        <p style="padding:20px;color:#888;">A carregar vinhos…</p>
                     </div>
                 </div>
                 
@@ -129,55 +67,27 @@
                 <div class="cart-panel">
                     <div style="padding: 20px; background: var(--beige); border-bottom: 2px solid var(--tan);">
                         <h3 style="color: var(--wine-dark);">🛒 Carrinho</h3>
-                        <p style="font-size: 12px; color: #666; margin-top: 4px;">2 itens</p>
+                        <p id="cart-count" style="font-size: 12px; color: #666; margin-top: 4px;">0 itens</p>
                     </div>
                     
-                    <div style="padding: 20px; flex:  1; overflow-y: auto;">
-                        <div style="background: white; border:  2px solid var(--tan); padding: 12px; border-radius: 8px; margin-bottom: 12px;">
-                            <div style="display: flex; justify-content: space-between; align-items: start;">
-                                <div style="flex: 1;">
-                                    <strong style="color: var(--wine-dark); display: block; margin-bottom: 4px;">Sassicaia 2018</strong>
-                                    <div style="font-size: 12px; color: #888;">Tinto • Super Tuscan</div>
-                                    <div style="font-size: 13px; color: #666; margin-top: 6px;">1 × €320.00</div>
-                                </div>
-                                <strong style="color: var(--wine-primary); font-size: 18px; font-family: 'Playfair Display', serif;">€320.00</strong>
-                            </div>
-                        </div>
-                        
-                        <div style="background: white; border: 2px solid var(--tan); padding: 12px; border-radius:  8px; margin-bottom:  12px;">
-                            <div style="display: flex; justify-content: space-between; align-items: start;">
-                                <div style="flex: 1;">
-                                    <strong style="color: var(--wine-dark); display: block; margin-bottom: 4px;">Cloudy Bay</strong>
-                                    <div style="font-size: 12px; color: #888;">Branco • Nova Zelândia</div>
-                                    <div style="font-size: 13px; color:  #666; margin-top: 6px;">2 × €45.00</div>
-                                </div>
-                                <strong style="color:  var(--wine-primary); font-size: 18px; font-family: 'Playfair Display', serif;">€90.00</strong>
-                            </div>
-                        </div>
-                        
-                        <div style="background: var(--beige); padding: 16px; border-radius: 12px; margin-top: 20px;">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px;">
-                                <span style="color:  #666;">Subtotal:</span>
-                                <strong style="color: var(--wine-dark);">€410.00</strong>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px;">
-                                <span style="color: #666;">IVA (23%):</span>
-                                <strong style="color: var(--wine-dark);">€94.30</strong>
-                            </div>
-                            <div style="border-top: 2px solid var(--tan); margin:  12px 0; padding-top: 12px; display: flex; justify-content: space-between;">
-                                <strong style="font-size: 18px; color: var(--wine-dark);">Total:</strong>
-                                <strong style="font-size: 24px; color: var(--gold); font-family: 'Playfair Display', serif;">€504.30</strong>
-                            </div>
-                        </div>
+                    <div id="cart-items" style="padding: 20px; flex: 1; overflow-y: auto;">
+                        <p style="padding:20px;color:#aaa;text-align:center;">Carrinho vazio</p>
                     </div>
                     
                     <div style="padding: 20px; border-top: 2px solid var(--tan);">
-                        <button class="btn-add" style="font-size: 16px; font-weight: bold;">✓ Finalizar Compra</button>
-                        <button style="width: 100%; padding: 12px; margin-top: 10px; background: white; border: 2px solid var(--tan); border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--wine-primary); transition: all 0.3s ease;">Limpar Carrinho</button>
+                        <div style="background: var(--beige); padding: 16px; border-radius: 12px; margin-bottom: 16px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px;">
+                                <span style="color: #666;">Total:</span>
+                                <strong id="cart-total" style="font-size: 24px; color: var(--gold); font-family: 'Playfair Display', serif;">€0.00</strong>
+                            </div>
+                        </div>
+                        <button class="btn-add" style="font-size: 16px; font-weight: bold;" onclick="alert('Funcionalidade de checkout disponível no menu de consola.')">✓ Finalizar Compra</button>
+                        <button onclick="clearCart()" style="width: 100%; padding: 12px; margin-top: 10px; background: white; border: 2px solid var(--tan); border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--wine-primary); transition: all 0.3s ease;">Limpar Carrinho</button>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

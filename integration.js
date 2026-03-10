@@ -1,26 +1,30 @@
-// integration.js
+/**
+ * integration.js — Funções de integração com o servidor Java.
+ * Delega para as funções implementadas em app.js.
+ */
 
-// Function to load product data
-function loadProducts() {
-    // Logic to load products
+/** Carrega a lista de vinhos e renderiza os cartões de produto. */
+function loadProducts(tipo) {
+    loadVinhos(tipo || '');
 }
 
-// Function to manage cart
+/** Gere a adição/remoção de produtos no carrinho. */
 function manageCart() {
-    // Logic for adding/removing products from the cart
+    renderCart();
 }
 
-// Function to load dashboard data
-function loadDashboard() {
-    // Logic to load dashboard contents
+/** Carrega os dados do painel do gerente. */
+function loadDashboardData() {
+    loadDashboard();
 }
 
-// Function to manage team
+/** Carrega a equipa de funcionários. */
 function manageTeam() {
-    // Logic to manage team members
+    loadEquipa();
 }
 
-// Function to manage stock
+/** Carrega os dados de stock. */
 function manageStock() {
-    // Logic to manage stock levels
+    loadStock();
 }
+

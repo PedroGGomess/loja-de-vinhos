@@ -68,18 +68,18 @@
             <div class="dashboard-grid">
                 <div class="kpi-card">
                     <p class="kpi-label">Total de Vendas</p>
-                    <div class="kpi-value">€24,385</div>
-                    <small class="kpi-meta">Últimos 30 dias</small>
+                    <div class="kpi-value" id="kpi-total-vendas">…</div>
+                    <small class="kpi-meta">Faturação acumulada</small>
                 </div>
                 <div class="kpi-card">
                     <p class="kpi-label">Transações</p>
-                    <div class="kpi-value">42</div>
-                    <small class="kpi-meta">Este mês</small>
+                    <div class="kpi-value" id="kpi-num-transacoes">…</div>
+                    <small class="kpi-meta">Vendas concluídas</small>
                 </div>
                 <div class="kpi-card">
                     <p class="kpi-label">Ticket Médio</p>
-                    <div class="kpi-value">€580</div>
-                    <small class="kpi-trend positive">+12% vs mês anterior</small>
+                    <div class="kpi-value" id="kpi-ticket-medio">…</div>
+                    <small class="kpi-meta">Por transação</small>
                 </div>
             </div>
             
@@ -101,111 +101,26 @@
                             <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>#VD-1043</code></td>
-                            <td>07/01/2026 14:32</td>
-                            <td><strong>João Silva</strong></td>
-                            <td>Château Margaux 2015</td>
-                            <td>1</td>
-                            <td class="price-col">€450.99</td>
-                            <td>💳 Cartão</td>
-                            <td><span class="status-success">✓ Concluído</span></td>
-                        </tr>
-                        <tr>
-                            <td><code>#VD-1042</code></td>
-                            <td>07/01/2026 13:15</td>
-                            <td><strong>Maria Santos</strong></td>
-                            <td>Cloudy Bay</td>
-                            <td>2</td>
-                            <td class="price-col">€90.00</td>
-                            <td>📱 MB Way</td>
-                            <td><span class="status-success">✓ Concluído</span></td>
-                        </tr>
-                        <tr>
-                            <td><code>#VD-1041</code></td>
-                            <td>07/01/2026 11:20</td>
-                            <td><strong>Hotel Ritz</strong></td>
-                            <td>Dom Pérignon</td>
-                            <td>6</td>
-                            <td class="price-col">€2,313.00</td>
-                            <td>🏦 Transferência</td>
-                            <td><span class="status-pending">⏳ Pendente</span></td>
-                        </tr>
-                        <tr>
-                            <td><code>#VD-1040</code></td>
-                            <td>07/01/2026 10:05</td>
-                            <td><strong>António Costa</strong></td>
-                            <td>Sassicaia 2018</td>
-                            <td>1</td>
-                            <td class="price-col">€320.00</td>
-                            <td>💵 Numerário</td>
-                            <td><span class="status-success">✓ Concluído</span></td>
-                        </tr>
-                        <tr>
-                            <td><code>#VD-1039</code></td>
-                            <td>06/01/2026 18:45</td>
-                            <td><strong>Restaurante Belcanto</strong></td>
-                            <td>Pêra-Manca 2015</td>
-                            <td>12</td>
-                            <td class="price-col">€1,680.00</td>
-                            <td>🏦 Transferência</td>
-                            <td><span class="status-success">✓ Concluído</span></td>
-                        </tr>
-                        <tr>
-                            <td><code>#VD-1038</code></td>
-                            <td>06/01/2026 16:22</td>
-                            <td><strong>Pedro Almeida</strong></td>
-                            <td>Taylor's Vintage 2000</td>
-                            <td>3</td>
-                            <td class="price-col">€585.00</td>
-                            <td>💳 Cartão</td>
-                            <td><span class="status-success">✓ Concluído</span></td>
-                        </tr>
-                        <tr>
-                            <td><code>#VD-1037</code></td>
-                            <td>06/01/2026 14:10</td>
-                            <td><strong>Ana Ferreira</strong></td>
-                            <td>Whispering Angel</td>
-                            <td>4</td>
-                            <td class="price-col">€128.00</td>
-                            <td>📱 MB Way</td>
-                            <td><span class="status-success">✓ Concluído</span></td>
-                        </tr>
-                        <tr>
-                            <td><code>#VD-1036</code></td>
-                            <td>06/01/2026 11:55</td>
-                            <td><strong>Café Majestic</strong></td>
-                            <td>Barca Velha 2011</td>
-                            <td>8</td>
-                            <td class="price-col">€2,240.00</td>
-                            <td>🏦 Transferência</td>
-                            <td><span class="status-success">✓ Concluído</span></td>
-                        </tr>
-                        <tr>
-                            <td><code>#VD-1035</code></td>
-                            <td>05/01/2026 17:30</td>
-                            <td><strong>Carlos Mendes</strong></td>
-                            <td>Cloudy Bay</td>
-                            <td>1</td>
-                            <td class="price-col">€45.00</td>
-                            <td>💳 Cartão</td>
-                            <td><span class="status-success">✓ Concluído</span></td>
-                        </tr>
-                        <tr>
-                            <td><code>#VD-1034</code></td>
-                            <td>05/01/2026 15:15</td>
-                            <td><strong>Hotel Palácio</strong></td>
-                            <td>Dom Pérignon 2012</td>
-                            <td>10</td>
-                            <td class="price-col">€3,855.00</td>
-                            <td>🏦 Transferência</td>
-                            <td><span class="status-pending">⏳ Pendente</span></td>
-                        </tr>
+                    <tbody id="vendas-tbody">
+                        <tr><td colspan="8" style="color:#aaa;">A carregar…</td></tr>
                     </tbody>
                 </table>
             </div>
         </main>
     </div>
+    <script src="app.js"></script>
+    <script>
+        // Calcula o ticket médio depois de carregar
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const res  = await fetch('/api/dashboard');
+                const data = await res.json();
+                const medio = data.totalVendas > 0
+                    ? data.faturacaoTotal / data.totalVendas : 0;
+                const el = document.getElementById('kpi-ticket-medio');
+                if (el) el.textContent = '€' + medio.toFixed(2);
+            } catch (_) {}
+        });
+    </script>
 </body>
 </html>
